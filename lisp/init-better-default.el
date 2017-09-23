@@ -62,7 +62,7 @@
        '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
 ;;关闭提示音
-(setq ring-bell-function 'ingnore)
+(setq ring-bell-function 'ignore)
 ;;更改yes or no 为 y or n
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
@@ -78,6 +78,11 @@
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
+(require 'multi-term)
+(setq multi-term-program "/bin/zsh")
+(add-hook 'term-mode-hook
+          (lambda ()
+            (setq term-buffer-maximum-size 0)))
 ;;python environment
 (defcustom python-shell-interpreter "python3"
   "Default Python interpreter for shell."

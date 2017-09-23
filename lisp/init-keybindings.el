@@ -13,12 +13,14 @@
   "1"  'select-window-1
   "2"  'select-window-2
   "3"  'select-window-3
+  "4"  'select-window-4
   "w/" 'split-window-right
   "w-" 'split-window-below
   ":"  'counsel-M-x
   "wM" 'delete-other-windows
   "er" 'iedit-mode
-  "ss" 'shell
+  "ea" 'mark-whole-buffer
+  "ss" 'multi-term
   "jm" 'java-mode
   )
 (provide 'init-keybindings)

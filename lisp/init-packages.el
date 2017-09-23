@@ -21,6 +21,7 @@
                ;; --- Major Mode ---
 	       evil
                js2-mode
+	       multi-term
 	       ;;--- Python ---
 	       elpy
 	       jedi
